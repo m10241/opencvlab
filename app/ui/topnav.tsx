@@ -10,7 +10,9 @@ export default function TopNav() {
                         <Image src={`https://opencv1.b-cdn.net/wp-content/uploads/2020/07/OpenCV_logo_no_text-1.svg`} alt="opencv logo" width="32" height="32"></Image>
                     </div>
                     <div className="hidden sm:ml-2 sm:block">
-                        <span className="font-semibold text-xl tracking-tight">OpenCV Lab</span>
+                        <Link href="/">
+                            <span className="font-semibold text-xl tracking-tight">OpenCV Lab</span>
+                        </Link>
                     </div>
                 </div>
                 <div className="block lg:hidden">
@@ -20,8 +22,8 @@ export default function TopNav() {
                 </div>
                 <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div className="text-sm lg:flex-grow">
-                        <Link href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
-                            Docs
+                        <Link href="/lab" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
+                            Lab
                         </Link>
                         <Link href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
                             Examples
