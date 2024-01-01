@@ -1,14 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import TopNavItem from "./topnavitem";
 
 export default function TopNav() {
     return (
         <nav className="bg-gray-200 dark:bg-gray-900">
             <div className="flex items-center justify-between flex-wrap p-6">
-                <div className="flex flex-shrink-0 text-white lg:mr-6">
+                <div className="flex flex-shrink-0 text-black dark:text-white lg:mr-6">
+                    <Link href="/">
                     <div className="flex flex-shrink-0 items-center">
                         <Image src={`https://opencv1.b-cdn.net/wp-content/uploads/2020/07/OpenCV_logo_no_text-1.svg`} alt="opencv logo" width="32" height="32"></Image>
                     </div>
+                    </Link>
                     <div className="hidden sm:ml-2 sm:block">
                         <Link href="/">
                             <span className="font-semibold text-xl tracking-tight">OpenCV Lab</span>
@@ -22,12 +25,7 @@ export default function TopNav() {
                 </div>
                 <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div className="text-sm lg:flex-grow">
-                        <Link href="/lab" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
-                            Lab
-                        </Link>
-                        <Link href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
-                            Examples
-                        </Link>
+                        <TopNavItem href="/lab" displayText="Lab"></TopNavItem>
                     </div>
                     {/* <div>
                     <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
